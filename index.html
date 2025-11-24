@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Refeições</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+    <header>
+        <h1>Calculadora de Refeições</h1>
+    </header>
+    <main>
+        <section id="alimento-cardapio">
+            <p>Selecione a sua refeição e a quantidade de refeições!</p>
+            <select name="alimentos" id="alimentos">
+                <option>Selecione Sua Refeição</option>
+                <option value="almocoCompleto">Almoço Completo</option>
+                <option value="salgados">Salgados</option>
+                <option value="pastelComCaldo">Pastel Com Caldo De Cana</option>
+                <option value="cafeDaManha">Café Da Manhã</option>
+            </select>
+            <input type="number" id="quantidade" min="0" max="9" placeholder="quantidade">
+            <button id="btnAdicionar">Adicionar ao pedido</button>
+            <div id="erro"></div>
+        </section>
+        <section id="pedido">
+            <ul id="lista-pedido"></ul>
+        </section>
+        <div id="total-geral"></div>
+    </main>
+    <footer> Kaio 24/11/2025</footer>
+    <script src="./js/script.js"></script>
+</div>
+</body>
+
+</html>
