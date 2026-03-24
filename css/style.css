@@ -1,86 +1,96 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1e90ff, #6a11cb);
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    text-align: center;
 }
 
-
+/* cartão principal */
 .container {
-    max-width: 600px;
-    padding: 20px;
     width: 90%;
+    max-width: 520px;
+    padding: 35px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: fadeIn 0.6s ease;
 }
 
-
+/* título */
 h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
     margin-bottom: 10px;
-    border-radius: 10px;
+    letter-spacing: 0.5px;
 }
 
+/* texto */
 p {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
+    opacity: 0.85;
+    margin-bottom: 20px;
 }
 
+/* inputs */
+input,
 select {
-    width: 100px;
+    width: 120px;
+    padding: 8px 10px;
+    margin: 5px;
     border-radius: 10px;
-    padding: 5px;
-    background-color: #1190cb;
-    color: white;
-
-}
-
-option:hover {
-    color: white;
-
-}
-
-input {
-    width: 100px;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-button {
-    color: #fff;
-    background-color: #0066ff;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 200px;
-    height: 50px;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    transition: 0.25s;
+}
+
+option{
+    color: black;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+/* efeito foco */
+input:focus,
+select:focus {
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.2);
+}
+
+/* botão */
+button {
+    margin-top: 18px;
+    width: 220px;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
     font-size: 1rem;
-    margin-top: 15px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0 6px 18px rgba(0,114,255,0.4);
 }
 
+/* animação hover */
 button:hover {
-    background-color: #1843b8;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,114,255,0.55);
 }
 
+/* rodapé */
 footer {
-    margin-top: auto;
-    padding: 20px;
-    font-size: 0.9rem;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    opacity: 0.7;
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.6rem;
-    }
-
-    button {
-        width: 160px;
-        height: 45px;
-    }
-}
